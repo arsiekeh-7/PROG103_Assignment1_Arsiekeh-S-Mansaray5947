@@ -17,8 +17,6 @@ def get_grade(average):
         grade = "F"
     return grade
 
-
-# -- Function 2: Add a new student --
 def add_student():
     print("ADD STUDENT RECORD")
 
@@ -31,20 +29,16 @@ def add_student():
     science = float(input("  Science: "))
     ict = float(input("  ICT: "))
 
-    # Calculate total and average
     total = math + english + science + ict
     average = total / 4
 
-    # Get grade
     grade = get_grade(average)
 
-    # Check pass or fail
     if average >= 50:
         status = "PASS"
     else:
         status = "FAIL"
 
-    # Save to lists
     student_names.append(name)
     student_averages.append(average)
     student_grades.append(grade)
@@ -58,7 +52,6 @@ def add_student():
     print("Status:  " + status)
 
 
-# -- Function 3: View all students --
 def view_students():
     print("ALL STUDENT RECORDS")
 
@@ -75,7 +68,6 @@ def view_students():
     print("Total students: " + str(len(student_names)))
 
 
-# -- Function 4: Show class summary --
 def show_summary():
     print("CLASS SUMMARY")
 
@@ -106,7 +98,6 @@ def show_summary():
 
 
 
-# MAIN PROGRAM
 
 print("Welcome to SRMTS")
 print("Student Result Management Terminal System")
